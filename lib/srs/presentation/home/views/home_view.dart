@@ -1,4 +1,6 @@
+import 'package:dio_urok/srs/components/CostomProduktCard.dart';
 import 'package:dio_urok/srs/presentation/home/widgets/search_container_wigets.dart';
+import 'package:dio_urok/srs/presentation/info/info_viu.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {
@@ -40,10 +42,12 @@ class HomeView extends StatelessWidget {
                   crossAxisCount: 2,
                 ),
                 itemBuilder: (context, index) {
-                  return Card(
-                    shape:
-                        RoundedRectangleBorder(borderRadius: BorderRadius.zero),
-                    color: Colors.grey,
+                  return GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => InfoViu()));
+                    },
+                    child: CostomProduktCard(),
                   );
                 },
               ),
