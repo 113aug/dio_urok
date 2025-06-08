@@ -2,7 +2,10 @@ import 'package:dio_urok/srs/components/CostomProduktCard.dart';
 import 'package:flutter/material.dart';
 
 class InfoViu extends StatelessWidget {
-  const InfoViu({Key? key}) : super(key: key);
+  final String title;
+  final String des;
+  const InfoViu({Key? key, required this.title, required this.des})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +30,13 @@ class InfoViu extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Center(child: SizedBox(height: 300, child: CostomProduktCard()))
+            Center(
+                child: SizedBox(
+                    height: 300,
+                    child: CostomProduktCard(
+                      des: des,
+                      title: title,
+                    )))
           ],
         ),
       ),

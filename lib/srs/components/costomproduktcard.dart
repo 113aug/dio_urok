@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 
 class CostomProduktCard extends StatelessWidget {
+  final String title;
+  final String des;
   const CostomProduktCard({
     super.key,
+    required this.title,
+    required this.des,
   });
 
   @override
@@ -13,11 +17,11 @@ class CostomProduktCard extends StatelessWidget {
         children: [
           Center(
               child: Text(
-            'title',
+            title,
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 40),
           )),
           Text(
-            'Dex',
+            des,
             style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
           )
         ],
